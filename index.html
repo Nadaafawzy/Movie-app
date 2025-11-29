@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <!--Font Awesome library icons  -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- fav icon link -->
+    <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="mini-sidebar" id="miniSidebar">
+        <div class="logo"><img src="imgs\logo.png" alt="logo" width="30"></div>
+        <div class="menu" id="menu"><i class="fa-solid fa-align-justify" id="toggle"></i></div>
+        <div class="icons d-flex flex-column">
+            <i class="fa-solid fa-globe"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+        </div>
+
+    </div>
+
+
+    <div class="big-sidebar" id="bigSidebar">
+        <ul class="menu-list">
+            <li data-api="https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1">Now playing</li>
+            <li data-api="https://api.themoviedb.org/3/movie/popular?language=en-US&page=1">Popular</li>
+            <li data-api="https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1">Top Rated</li>
+            <li data-api="https://api.themoviedb.org/3/trending/all/day?api_key=eba8b9a7199efdcb0ca1f96879b83c44">Trending</li>
+            <li data-api="https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1">Upcoming</li>
+            <li><a href="#contact" class="text-decoration-none text-white">Contact Us</a></li>
+        </ul>
+
+        <div class="footer">
+            <div class="social-icons">
+                <ul class="d-flex flex-row list-unstyled">
+                    <li class="pe-2"><a href=""><i class="fa-brands fa-facebook-f text-white"></i></a></li>
+                    <li class="pe-2"><a href=""><i class="fa-brands fa-twitter text-white"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-globe text-white"></i></a></li>
+                </ul>
+            </div>
+            <p class="copy">Copyright © 2022 All Rights Reserved.</p>
+            <p>Created by <a href="" class="red text-decoration-none">Housam Ramadan</a></p>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <input type="text" id="searchInput"
+            class="w-50 rounded-pill mt-3 border-2 text-white bg-black border-white ps-3 p-2 d-flex justify-content-center align-content-center mx-auto position-relative"
+            placeholder="search">
+    </div>
+    <div class="container">
+        <div class="row pt-5 g-5" id="moviesContainer">
+
+        </div>
+    </div>
+    <!-- contact section -->
+    <section class="contact my-5" id="contact">
+        <div class="container">
+            <h2 class="text-white fw-light mt-5">Contact US</h2>
+            <form>
+                <div class="row">
+                    <div class="col-md-12 col-lg-6 py-2">
+                        <input type="text" placeholder="Enter Your Name" class=" form-control text-center " id="name" required>
+                    </div>
+                    <div class="col-md-12 col-lg-6 py-2">
+                        <input type="email" placeholder="Enter Your Email" class=" form-control text-center" id="email">
+                        <p class="error invisible">
+                            Invalid Email,try example@domain.com
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-6 py-2">
+                        <input type="tel" placeholder="Enter Your Phone" class=" form-control text-center" id="phone">
+                        <p class="error invisible">
+                            Invalid Phone Number
+                        </p>
+                    </div>
+                    <div class="col-md-12 col-lg-6 py-2">
+                        <input type="number" placeholder="Enter Your Age" class=" form-control text-center" id="age">
+                        <p class="error invisible">
+                            Your age must be over 16+
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-6 py-2">
+                        <input type="password" placeholder="Enter Your Password" class=" form-control text-center" id="password">
+                        <p class="error invisible">
+                            password must contain numbers & letters at least 8 character
+                        </p>
+                    </div>
+                    <div class="col-md-12 col-lg-6 py-2">
+                        <input type="password" placeholder="ReEnter Password" class=" form-control text-center" id="repassword">
+                        <p class="error invisible">
+                            password not match
+                        </p>
+                    </div>
+                </div>
+                <button type="button" class=" border-0 rounded-2 bg-black text-white py-2 px-4 mt-3 " id="submit">Submit</button>
+            </form>
+        </div>
+        <div id="scrollUp"><i class="fa-solid fa-arrow-up text-white "></i></div>
+    </section>
+    <!-- JQuery -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!--  main js file -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
